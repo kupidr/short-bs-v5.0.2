@@ -1,0 +1,173 @@
+/* fonts google */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400&display=swap');
+/* font-family: 'Montserrat', sans-serif; */
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background-color: #90989e;
+}
+/* reset all   */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+img {
+  width: 100%;
+}
+a {
+  text-decoration: none;
+}
+
+p {
+  color: var(--black-1);
+}
+/* gird  */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+.container::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+/* color  */
+:root {
+  --yellow: #fac608;
+  --white: #ffffff;
+  --black-1: #90989e;
+}
+
+/* start style here */
+/* start header area  */
+header {
+  background-color: var(--white);
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  position: -webkit-sticky !important;
+  position: sticky !important;
+  top: 0;
+  z-index: 1;
+}
+header h1 {
+  color: var(--black-1);
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+}
+header h1 a {
+  color: var(--black-1);
+}
+header h1 a:hover {
+  text-decoration: underline;
+  color: var(--yellow);
+}
+/* end header area  */
+/* ----------start  left side area---------- */
+.left-side {
+  overflow-y: scroll;
+  height: 95vh;
+  scrollbar-width: thin;
+  scrollbar-color: var(--yellow) var(--white);
+}
+.left-side {
+  width: 30%;
+  float: left;
+  margin-right: 1rem;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 8%;
+  background-color: var(--white);
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  padding: 1rem;
+}
+.left-side .profile {
+  text-align: center;
+  border-bottom: 2px solid var(--black-1);
+}
+.left-side .profile img {
+  border-radius: 50%;
+  max-width: 150px;
+  margin-bottom: 10px;
+  transition: 0.5s;
+}
+.left-side .profile:hover img {
+  outline: 5px solid var(--yellow);
+}
+.nav-bar {
+  margin-top: 20px;
+  padding-bottom: 1rem;
+}
+.nav-bar nav ul li {
+  list-style: none;
+  margin: 10px 0;
+}
+.nav-bar nav ul li a {
+  display: block;
+  padding: 10px 12px;
+  border-radius: 20px;
+  color: var(--black-1);
+  background-color: var(--white);
+  font-weight: bold;
+  text-transform: uppercase;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
+    rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+  transition: 0.5s;
+}
+.nav-bar nav ul li a:hover {
+  background-color: var(--yellow);
+  color: var(--white);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+/* ----------start right side area----------  */
+.right-side {
+  width: 68%;
+  float: left;
+}
+.right-side section .card {
+  padding: 1rem 0.5rem;
+  margin-bottom: 1rem;
+  background-color: #ffffff;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
+    rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+  transition: 0.5s;
+}
+.right-side section .card .card-title {
+  background: #ddd;
+  padding: 1rem;
+  margin: -1rem -0.5rem 0 -0.5rem;
+  color: #616060;
+}
+.right-side section .card .card-image {
+  border: 2px solid var(--black-1);
+}
+.right-side section .copy-view {
+  margin: 1rem 0;
+}
+.right-side section .copy-view .copy button {
+  background: #0d6efd;
+  border: none;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+.right-side section section {
+  overflow: scroll;
+  max-height: 400px;
+  padding: 1rem 0.5rem;
+  background-color: aliceblue;
+  border: 2px solid #ddd;
+  font-size: 14px;
+}
+/* ----------end right side area----------  */
