@@ -1,4 +1,4 @@
-export default function install() {
+export default function() {
   // css cdn link here
   let bsCssCdn = `
   <div class="highlight">
@@ -105,8 +105,11 @@ export default function install() {
     <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
       &lt;-- start body code here --&gt;<br /><br /><br /></code></pre>
-  <pre class="chroma"><code class="language-html" data-lang="html">    &lt;-- end body code here --&gt;</code></pre>
-  <pre class="chroma"><code class="language-html" data-lang="html"><span class="c">&lt;!-- Bootstrap Bundle with Popper --&gt;</span> <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">"https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"</span> <span class="na">integrity</span><span class="o">=</span><span class="s">"sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">"anonymous"</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span> <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span> <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span> </code></pre>
+  <pre class="chroma"><code class="language-html" data-lang="html">       &lt;-- end body code here --&gt;</code></pre>
+  <pre class="chroma"><code class="language-html" data-lang="html">       <span class="c">&lt;!-- Bootstrap Bundle with Popper --&gt;</span>
+  <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">"https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"</span> <span class="na">integrity</span><span class="o">=</span><span class="s">"sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">"anonymous"</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span> 
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span> </code></pre>
   </div>
   </div>
 `;

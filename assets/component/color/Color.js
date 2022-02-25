@@ -1,4 +1,4 @@
-export default function Color() {
+export default function() {
   // all category button
   function allCategroyButton() {
     let btn = `
@@ -46,7 +46,7 @@ export default function Color() {
   // background color
   function bsBgColor() {
     let title = `<div class="card-title">
-    <h2>Background <b>Color</b> <i>.bg-color</i></h2>
+    <h2><b>Background Color</b> <i>.bg-color</i></h2>
   </div>
   `;
     let img = `<div class="card-image">
@@ -142,8 +142,7 @@ export default function Color() {
   function append(parent, children) {
     children.forEach((child) => parent.appendChild(child));
   }
-
-  // filter card
+  // *****************filter card*****************
   (function () {
     // category btn hrere
     let allCard = document.getElementById("all");
@@ -158,7 +157,6 @@ export default function Color() {
     let cardBorderColor = document.getElementById("cardBorderColor");
 
     // showAllCard(allCard);
-
     (function (e) {
       e.addEventListener("click", function () {
         show(cardMainColor);
@@ -230,4 +228,14 @@ export default function Color() {
       e.style.display = "none";
     }
   })();
+  let categoryNav = document.querySelector(".category").children;
+
+  for (let i = 0; i < categoryNav.length; i++) {
+    categoryNav[i].addEventListener("click", function () {
+      for (let j = 0; j < categoryNav.length; j++) {
+        categoryNav[j].classList.remove("active");
+      }
+      this.classList.add("active");
+    });
+  }
 }
