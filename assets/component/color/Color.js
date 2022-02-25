@@ -228,8 +228,9 @@ export default function() {
       e.style.display = "none";
     }
   })();
+  
+  // Top nav color Function Here
   let categoryNav = document.querySelector(".category").children;
-
   for (let i = 0; i < categoryNav.length; i++) {
     categoryNav[i].addEventListener("click", function () {
       for (let j = 0; j < categoryNav.length; j++) {

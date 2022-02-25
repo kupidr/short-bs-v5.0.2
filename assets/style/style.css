@@ -80,6 +80,9 @@ p {
 .right-side section .copy-view {
   margin: 1rem 0;
 }
+.right-side section .copy-view .copy{
+  text-align: right;
+}
 .right-side section .copy-view .copy button {
   background: var(--primary);
   border: none;
@@ -96,7 +99,8 @@ p {
   margin: -1rem auto;
 }
 .right-side section .copy-view .category button {
-  background: #6c757d;
+  /* background: #6c757d; */
+  background: var(--primary);
   border: none;
   color: #fff;
   font-size: 1rem;

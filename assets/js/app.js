@@ -20,16 +20,19 @@ for (let i = 0; i < navClick.length; i++) {
 }
 
 // ***********There is All components***********
-let hom = document.querySelector(".nav-bar  nav ul #home");
-let ins = document.querySelector(".nav-bar  nav ul #install");
-let col = document.querySelector(".nav-bar  nav ul #color");
-hom.addEventListener("click", function () {
-  window.location.reload()
-});
-ins.addEventListener("click", function () {
-  Install();
-});
-col.addEventListener("click", function () {
-  Color();
-});
-Install();
+// let rInstall = document.querySelector("right-side section#install")
+// let hom = document.querySelector(".nav-bar  nav ul #home");
+// let ins = document.querySelector(".nav-bar  nav ul #install");
+// let col = document.querySelector(".nav-bar  nav ul #color");
+// hom.addEventListener("click", function () {
+//   window.location.reload()
+// });
+// ins.addEventListener("click", function () {
+//   if(rInstall === 0){
+//     Install()
+//   }
+// });
+// col.addEventListener("click", function () {
+//   Color();
+// });
+Color()
