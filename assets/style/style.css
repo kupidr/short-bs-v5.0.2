@@ -175,7 +175,7 @@ header h1 a:hover {
   margin: -1rem auto;
 }
 .right-side section .copy-view .category button {
-  background: #0d6efd;
+  background: #6c757d;
   border: none;
   color: #fff;
   font-size: 1rem;
@@ -184,6 +184,9 @@ header h1 a:hover {
   margin: 0.5rem;
   border-radius: 5px;
 }
+.right-side section .copy-view .category button.active{
+  background-color: #0d6efd;
+} 
 .right-side section section {
   overflow: auto;
   max-height: 400px;

@@ -4,20 +4,19 @@ export default function Color() {
     let btn = `
     <div class="copy-view">
       <div class="category">
-        <button>All</button>
-        <button>Color</button>
-        <button>bg-color</button>
-        <button>text-color</button>
-        <button>border-color</button>
+        <button class="active" id="all">All</button>
+        <button id="mainBscolor">Color</button>
+        <button id="bg-color">bg-color</button>
+        <button id="btn-text-color">text-color</button>
+        <button id="border-color">border-color</button>
       </div>
     </div>
-    `
+    `;
 
     let card = btn;
     return createElement("div", "card", "", card);
   }
-
-
+  // --------------------------------------------------------------------
 
   // bootstrap main color
   function bsColor() {
@@ -41,7 +40,7 @@ export default function Color() {
     </div>`;
 
     let card = title + img;
-    return createElement("div", "card", "", card);
+    return createElement("div", "card", "cardMainColor", card);
   }
 
   // background color
@@ -66,9 +65,8 @@ export default function Color() {
     </div>`;
 
     let card = title + img;
-    return createElement("div", "card", "", card);
+    return createElement("div", "card", "cardBgColor", card);
   }
-
 
   // text color
   function textColor() {
@@ -92,11 +90,9 @@ export default function Color() {
     </div>`;
 
     let card = title + img;
-    return createElement("div", "card", "", card);
+    return createElement("div", "card", "cardTextColors", card);
   }
 
-
-  
   // border color
   function borderColor() {
     let title = `<div class="card-title">
@@ -119,12 +115,17 @@ export default function Color() {
     </div>`;
 
     let card = title + img;
-    return createElement("div", "card", "", card);
+    return createElement("div", "card", "cardBorderColor", card);
   }
 
-
   // here all include
-  let all = [allCategroyButton() ,bsColor(), bsBgColor(), textColor(), borderColor()];
+  let all = [
+    allCategroyButton(),
+    bsColor(),
+    bsBgColor(),
+    textColor(),
+    borderColor(),
+  ];
 
   let section = createElement("section", "", "install");
   append(section, all);
@@ -141,4 +142,92 @@ export default function Color() {
   function append(parent, children) {
     children.forEach((child) => parent.appendChild(child));
   }
+
+  // filter card
+  (function () {
+    // category btn hrere
+    let allCard = document.getElementById("all");
+    let mainBscolor = document.getElementById("mainBscolor");
+    let bgColor = document.getElementById("bg-color");
+    let navTextColor = document.getElementById("btn-text-color");
+    let borderColors = document.getElementById("border-color");
+    // card id here
+    let cardMainColor = document.getElementById("cardMainColor");
+    let cardBgColors = document.getElementById("cardBgColor");
+    let cardTextColors = document.getElementById("cardTextColors");
+    let cardBorderColor = document.getElementById("cardBorderColor");
+
+    // showAllCard(allCard);
+
+    (function (e) {
+      e.addEventListener("click", function () {
+        show(cardMainColor);
+        show(cardBgColors);
+        show(cardTextColors);
+        show(cardBorderColor);
+      });
+    })(allCard);
+
+    (function (e) {
+      e.addEventListener("click", function () {
+        oneShowAllHide(
+          cardMainColor,
+          cardBgColors,
+          cardTextColors,
+          cardBorderColor
+        );
+      });
+    })(mainBscolor);
+
+    (function (e) {
+      e.addEventListener("click", function () {
+        oneShowAllHide(
+          cardBgColors,
+          cardMainColor,
+          cardTextColors,
+          cardBorderColor
+        );
+      });
+    })(bgColor);
+
+    (function (e) {
+      e.addEventListener("click", function () {
+        oneShowAllHide(
+          cardTextColors,
+          cardBgColors,
+          cardMainColor,
+          cardBorderColor
+        );
+      });
+    })(navTextColor);
+
+    (function (e) {
+      e.addEventListener("click", function () {
+        oneShowAllHide(
+          cardBorderColor,
+          cardMainColor,
+          cardBgColors,
+          cardTextColors
+        );
+      });
+    })(borderColors);
+
+    // hide and show function
+    function oneShowAllHide() {
+      show(arguments[0]);
+      for (let i = 0; i < arguments.length; i++) {
+        if (i === 0) {
+          show(arguments[i]);
+        } else {
+          hide(arguments[i]);
+        }
+      }
+    }
+    function show(e) {
+      e.style.display = "block";
+    }
+    function hide(e) {
+      e.style.display = "none";
+    }
+  })();
 }
