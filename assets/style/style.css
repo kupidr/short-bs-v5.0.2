@@ -100,7 +100,7 @@ p {
 }
 .right-side section .copy-view .category button {
   /* background: #6c757d; */
-  background: var(--primary);
+  background: var(--black-1);
   border: none;
   color: #fff;
   font-size: 1rem;

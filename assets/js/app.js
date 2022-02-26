@@ -1,23 +1,22 @@
 // Import all files here
+import { activeNavColor } from "./functions.js";
 import Header from "../component/header/Header.js";
 import Aside from "../component/aside/Aside.js";
 import Home from "../component/home/Home.js";
 import Install from "../component/install/Install.js";
 import Color from "../component/color/Color.js";
 
+
 Header();
 Aside();
 Home();
-// Click and show document here
-let navClick = document.querySelector(".nav-bar  nav ul").children;
-for (let i = 0; i < navClick.length; i++) {
-  navClick[i].addEventListener("click", function () {
-    for (let j = 0; j < navClick.length; j++) {
-      navClick[j].classList.remove("active");
-    }
-    this.classList.add("active");
-  });
-}
+Install();
+
+
+// Click and show document and nav mhere
+let navClick = document.querySelector(".nav-bar  nav ul");
+activeNavColor(navClick)
+
 
 // ***********There is All components***********
 // let rInstall = document.querySelector("right-side section#install")
@@ -35,4 +34,3 @@ for (let i = 0; i < navClick.length; i++) {
 // col.addEventListener("click", function () {
 //   Color();
 // });
-Color()
