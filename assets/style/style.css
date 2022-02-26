@@ -1,7 +1,4 @@
-/* import all css files */
-@import url("../component/header/header.css");
-@import url("../component/aside/aside.css");
-@import url("../component/color/color.css");
+@import url("./index.css");
 /* fonts google */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400&display=swap");
 /* font-family: 'Montserrat', sans-serif; */
@@ -44,80 +41,32 @@ p {
 }
 /* color  */
 :root {
-  --yellow: #fac608;
   --white: #ffffff;
   --black-1: #90989e;
   --primary: #0d6efd;
 }
 
 /* start style here */
-
-/* ----------start right side area----------  */
-.right-side {
+/* aside style here  */
+aside {
+  overflow-y: scroll;
+  height: 95vh;
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary) var(--white);
+}
+aside {
+  width: 30%;
+  float: left;
+  margin-right: 1rem;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 8%;
+  background-color: var(--white);
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  padding: 1rem;
+}
+/* main style here */
+main {
   width: 68%;
   float: left;
 }
-.right-side section .card {
-  padding: 1rem 0.5rem;
-  margin-bottom: 1rem;
-  background-color: #ffffff;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
-    rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
-  transition: 0.5s;
-}
-.right-side section .card .card-title {
-  background: #ddd;
-  padding: 1rem;
-  margin: -1rem -0.5rem 0 -0.5rem;
-  color: #616060;
-}
-.right-side section .card .card-title h2 {
-  font-weight: normal;
-}
-.right-side section .card .card-image {
-  border: 2px solid var(--black-1);
-}
-.right-side section .copy-view {
-  margin: 1rem 0;
-}
-.right-side section .copy-view .copy{
-  text-align: right;
-}
-.right-side section .copy-view .copy button {
-  background: var(--primary);
-  border: none;
-  color: #fff;
-  font-size: 1rem;
-  font-weight: bold;
-  padding: 10px 20px;
-  border-radius: 5px;
-}
-.right-side section .copy-view .category {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  margin: -1rem auto;
-}
-.right-side section .copy-view .category button {
-  /* background: #6c757d; */
-  background: var(--black-1);
-  border: none;
-  color: #fff;
-  font-size: 1rem;
-  font-weight: bold;
-  padding: 10px 20px;
-  margin: 0.5rem;
-  border-radius: 5px;
-}
-.right-side section .copy-view .category button.active {
-  background-color: var(--primary);
-}
-.right-side section section {
-  overflow: auto;
-  max-height: 400px;
-  padding: 1rem 0.5rem;
-  background-color: aliceblue;
-  border: 2px solid #ddd;
-  font-size: 14px;
-}
-/* ----------end right side area----------  */

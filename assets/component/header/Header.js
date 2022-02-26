@@ -1,7 +1,7 @@
 export default function(){
   function title(){
     let h1 = `
-    Bootstrap <sub>v</sub>5
+    <a href="https://getbootstrap.com/docs/5.0/getting-started/introduction/" target="_blank">Bootstrap <sub>v</sub>5</a>
     `
     return createElement("h1", h1)
   }

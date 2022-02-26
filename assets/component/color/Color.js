@@ -16,7 +16,7 @@ export default function () {
 
   let section = createElement("section", "", "install");
   append(section, all);
-  let main = document.querySelector(".right-side");
+  let main = document.querySelector("main");
   main.appendChild(section);
 
   function createElement(tagName, className, id, innerHTML) {
@@ -48,6 +48,9 @@ export default function () {
     let card = btn;
     return createElement("div", "card", "", card);
   }
+  // Top nav color Function Here
+  let categoryNav = document.querySelector(".category");
+  activeNavColor(categoryNav);
   // category btn selected
   let allCard = document.getElementById("all");
   let mainBscolor = document.getElementById("mainBscolor");
@@ -257,7 +260,4 @@ export default function () {
     });
   })(allCard);
 
-  // Top nav color Function Here
-  let categoryNav = document.querySelector(".category");
-  activeNavColor(categoryNav);
 }
