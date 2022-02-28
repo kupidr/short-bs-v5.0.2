@@ -10,26 +10,9 @@ export default function () {
   Header();
   Aside();
   Home();
-  Color();
+  Install();
 
   // Click and show document and nav mhere
   let navClick = document.querySelector(".nav-bar  nav ul");
   activeNavColor(navClick);
 }
-
-// ***********There is All components***********
-// let rInstall = document.querySelector("main section#install")
-// let hom = document.querySelector(".nav-bar  nav ul #home");
-// let ins = document.querySelector(".nav-bar  nav ul #install");
-// let col = document.querySelector(".nav-bar  nav ul #color");
-// hom.addEventListener("click", function () {
-//   window.location.reload()
-// });
-// ins.addEventListener("click", function () {
-//   if(rInstall === 0){
-//     Install()
-//   }
-// });
-// col.addEventListener("click", function () {
-//   Color();
-// });

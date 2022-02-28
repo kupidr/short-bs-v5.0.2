@@ -3,6 +3,7 @@ import {
   oneClickShow,
   activeNavColor,
   show,
+  s,
 } from "../../js/functions.js";
 export default function () {
   // here Full fucntion include
@@ -16,7 +17,7 @@ export default function () {
   // default code here
   let section = createElement("section", "", "install");
   append(section, all);
-  let main = document.querySelector(".right-side");
+  let main = document.querySelector("main");
   main.appendChild(section);
 
   function createElement(tagName, className, id, innerHTML) {
@@ -51,11 +52,11 @@ export default function () {
   let categoryNav = document.querySelector(".category");
   activeNavColor(categoryNav);
   // category btn selected
-  let allCard = document.getElementById("all");
-  let css = document.getElementById("css");
-  let js = document.getElementById("js");
-  let start_template = document.getElementById("start_template");
-  let clean_template = document.getElementById("clean_template");
+  // let allCard = document.getElementById("all");
+  // let css = document.getElementById("css");
+  // let js = document.getElementById("js");
+  // let start_template = document.getElementById("start_template");
+  // let clean_template = document.getElementById("clean_template");
 
   // css cdn link here
   function cssCdn() {
@@ -76,9 +77,9 @@ export default function () {
 
     return createElement("div", "card", "cssCdnId", card);
   }
-  let cssCdnId = document.getElementById("cssCdnId");
-  let cssCdnCopy = document.getElementById("cssCdnCopy");
-  let cssCdnCode = document.getElementById("cssCdnCode");
+  // let cssCdnId = document.getElementById("cssCdnId");
+  // let cssCdnCopy = document.getElementById("cssCdnCopy");
+  // let cssCdnCode = document.getElementById("cssCdnCode");
   copyMethod(cssCdnCopy, cssCdnCode);
   (function (e) {
     e.addEventListener("click", function () {
@@ -107,9 +108,9 @@ export default function () {
     let card = title + btn + description;
     return createElement("div", "card", "jsCdnId", card);
   }
-  let jsCdnId = document.getElementById("jsCdnId");
-  let jsCdnCopy = document.getElementById("jsCdnCopy");
-  let jsCdnCode = document.getElementById("jsCdnCode");
+  // let jsCdnId = document.getElementById("jsCdnId");
+  // let jsCdnCopy = document.getElementById("jsCdnCopy");
+  // let jsCdnCode = document.getElementById("jsCdnCode");
   copyMethod(jsCdnCopy, jsCdnCode);
   (function (e) {
     e.addEventListener("click", function () {
@@ -168,15 +169,15 @@ export default function () {
     let card = title + btn + description;
     return createElement("div", "card", "startTemplateId", card);
   }
-  let startTemplateId = document.getElementById("startTemplateId");
-  let templateCopy = document.getElementById("templateCopy");
-  let templateCode = document.getElementById("templateCode");
+  // let startTemplateId = document.getElementById("startTemplateId");
+  // let templateCopy = document.getElementById("templateCopy");
+  // let templateCode = document.getElementById("templateCode");
   copyMethod(templateCopy, templateCode);
   (function (e) {
     e.addEventListener("click", function () {
       oneClickShow(startTemplateId, jsCdnId, cssCdnId, cleanTemplateId);
     });
-  })(start_template);
+  })(s("#start_template"));
 
   // Clean template
   function clenTemplate() {
@@ -222,9 +223,9 @@ export default function () {
     let card = title + btn + description;
     return createElement("div", "card", "cleanTemplateId", card);
   }
-  let cleanTemplateId = document.getElementById("cleanTemplateId");
-  let clenTemplateCopy = document.getElementById("clenTemplateCopy");
-  let clenTemplateCode = document.getElementById("clenTemplateCode");
+  // let cleanTemplateId = document.getElementById("cleanTemplateId");
+  // let clenTemplateCopy = document.getElementById("clenTemplateCopy");
+  // let clenTemplateCode = document.getElementById("clenTemplateCode");
   copyMethod(clenTemplateCopy, clenTemplateCode);
 
   (function (e) {
@@ -242,5 +243,5 @@ export default function () {
       show(cleanTemplateId);
     });
   }
-  allCardX(allCard);
+  allCardX(s("#all"));
 }

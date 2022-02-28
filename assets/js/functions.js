@@ -36,6 +36,7 @@ function activeNavColor(e) {
     });
   }
 }
+// one click and shwo one card item top nav  
 function oneClickShow() {
   show(arguments[0]);
   for (let i = 0; i < arguments.length; i++) {
@@ -46,10 +47,16 @@ function oneClickShow() {
     }
   }
 }
+// show any html element
 function show(e) {
   e.style.display = "block";
 }
+// hide any html element
 function hide(e) {
   e.style.display = "none";
 }
-export { copyMethod, activeNavColor, oneClickShow, show, hide };
+// this function name is selcector in html tag, id, class-one
+function s(e) {
+  return document.querySelector(e);
+}
+export { copyMethod, activeNavColor, oneClickShow, show, hide, s };
